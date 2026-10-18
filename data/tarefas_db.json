@@ -1,23 +1,79 @@
 [
   {
-    "titulo": "Domir",
-    "descricao": "",
+    "titulo": "Dormir",
+    "descricao": "Original - futura",
     "prioridade": "Alta",
     "data_limite": "01/01/2027",
     "status": "Pendente"
   },
   {
     "titulo": "Acordar",
-    "descricao": "",
+    "descricao": "Original - futura",
     "prioridade": "Alta",
     "data_limite": "15/10/2028",
     "status": "Pendente"
   },
   {
     "titulo": "Banhar",
-    "descricao": "",
+    "descricao": "Original - futura",
     "prioridade": "Alta",
     "data_limite": "10/10/2030",
+    "status": "Pendente"
+  },
+  {
+    "titulo": "HOJE",
+    "descricao": "Deve aparecer em Hoje + 7d + Mês + Todas",
+    "prioridade": "Alta",
+    "data_limite": "17/10/2026",
+    "status": "Pendente"
+  },
+  {
+    "titulo": "Amanhã (7d)",
+    "descricao": "7d + Mês + Todas",
+    "prioridade": "Média",
+    "data_limite": "19/10/2026",
+    "status": "Pendente"
+  },
+  {
+    "titulo": "+3 dias (7d)",
+    "descricao": "7d + Mês + Todas",
+    "prioridade": "Média",
+    "data_limite": "21/10/2026",
+    "status": "Pendente"
+  },
+  {
+    "titulo": "+7 dias (borda)",
+    "descricao": "Borda dos 7d - deve aparecer em 7d",
+    "prioridade": "Média",
+    "data_limite": "25/10/2026",
+    "status": "Pendente"
+  },
+  {
+    "titulo": "+8 dias (borda)",
+    "descricao": "NÃO deve aparecer em 7d (só Mês/Todas)",
+    "prioridade": "Baixa",
+    "data_limite": "26/10/2026",
+    "status": "Pendente"
+  },
+  {
+    "titulo": "Fim do mês",
+    "descricao": "Aparece em Este mês + Todas",
+    "prioridade": "Média",
+    "data_limite": "31/10/2026",
+    "status": "Pendente"
+  },
+  {
+    "titulo": "Próximo mês",
+    "descricao": "Só Todas (fora do mês corrente)",
+    "prioridade": "Baixa",
+    "data_limite": "05/11/2026",
+    "status": "Pendente"
+  },
+  {
+    "titulo": "A",
+    "descricao": "",
+    "prioridade": "Baixa",
+    "data_limite": "12/12/2000",
     "status": "Pendente"
   }
 ]

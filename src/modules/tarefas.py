@@ -1,10 +1,11 @@
 """CRUD e persistência de tarefas em arquivo JSON local."""
 
 import json
+from datetime import datetime
 from pathlib import Path
 
 from .filtros_data import filtrar_tarefas, rotulo_periodo
-from .utils import limpar_tela, ler_titulo, ler_data, ler_prioridade
+from .utils import limpar_tela, ler_titulo, ler_data, ler_prioridade, validar_data
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 DB_PATH = BASE_DIR / "data" / "tarefas_db.json"
@@ -54,9 +55,11 @@ def exibir_tarefas(tarefas: list) -> None:
         return
 
     print()
+    total_tarefas = len(tarefas)
     for i, t in enumerate(tarefas, start=1):
+        numero = total_tarefas - i + 1
         status = "✅" if t["status"] == "Concluída" else "🕒"
-        print(f"[{i}] {status} {t['titulo']}")
+        print(f"[{numero}] {status} {t['titulo']}")
         print(f"     Descrição : {t.get('descricao') or '(sem descrição)'}")
         print(f"     Data      : {t['data_limite']}")
         print(f"     Prioridade: {t['prioridade']}")
@@ -81,7 +84,11 @@ def visualizar_tarefas(tarefas: list) -> None:
         print("⚠️  Opção inválida.")
         return
 
-    filtradas = filtrar_tarefas(tarefas, periodo)
+    filtradas = sorted(
+        filtrar_tarefas(tarefas, periodo),
+        key=lambda tarefa: validar_data(tarefa.get("data_limite", "")) or datetime.max,
+        reverse=True,
+    )
     print(f"\n=== {rotulo_periodo(periodo)} ===")
     exibir_tarefas(filtradas)
 
