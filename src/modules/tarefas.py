@@ -84,13 +84,41 @@ def visualizar_tarefas(tarefas: list) -> None:
         print("⚠️  Opção inválida.")
         return
 
-    filtradas = sorted(
-        filtrar_tarefas(tarefas, periodo),
-        key=lambda tarefa: validar_data(tarefa.get("data_limite", "")) or datetime.max,
-        reverse=True,
-    )
-    print(f"\n=== {rotulo_periodo(periodo)} ===")
-    exibir_tarefas(filtradas)
+    while True:
+        filtradas = sorted(
+            filtrar_tarefas(tarefas, periodo),
+            key=lambda tarefa: validar_data(tarefa.get("data_limite", "")) or datetime.max,
+            reverse=True,
+        )
+        print(f"\n=== {rotulo_periodo(periodo)} ===")
+        exibir_tarefas(filtradas)
+
+        if not filtradas:
+            return
+
+        escolha = input(
+            "\nDigite o número da tarefa para marcá-la como concluída (0 para voltar): "
+        ).strip()
+        if escolha == "0":
+            return
+
+        try:
+            numero = int(escolha)
+        except ValueError:
+            print("⚠️  Número inválido.")
+            continue
+
+        if not 1 <= numero <= len(filtradas):
+            print("⚠️  Número de tarefa inválido.")
+            continue
+
+        tarefa_selecionada = filtradas[len(filtradas) - numero]
+        indice = next(
+            i for i, tarefa in enumerate(tarefas) if tarefa is tarefa_selecionada
+        )
+        marcar_concluida(tarefas, indice)
+        limpar_tela()
+
 
 def marcar_concluida(tarefas: list, indice: int) -> list:
     """

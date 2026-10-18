@@ -25,14 +25,14 @@
     "descricao": "Deve aparecer em Hoje + 7d + Mês + Todas",
     "prioridade": "Alta",
     "data_limite": "17/10/2026",
-    "status": "Pendente"
+    "status": "Concluída"
   },
   {
     "titulo": "Amanhã (7d)",
     "descricao": "7d + Mês + Todas",
     "prioridade": "Média",
     "data_limite": "19/10/2026",
-    "status": "Pendente"
+    "status": "Concluída"
   },
   {
     "titulo": "+3 dias (7d)",
@@ -74,6 +74,6 @@
     "descricao": "",
     "prioridade": "Baixa",
     "data_limite": "12/12/2000",
-    "status": "Pendente"
+    "status": "Concluída"
   }
 ]
