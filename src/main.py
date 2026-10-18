@@ -31,6 +31,7 @@ def main() -> None:
         limpar_tela()
         exibir_menu()
         opcao = input("Escolha uma opção: ").strip()
+        limpar_tela()
 
         if opcao == "1":
             cadastrar_tarefa(tarefas)

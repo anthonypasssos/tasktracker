@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 from .filtros_data import filtrar_tarefas, rotulo_periodo
-from .utils import ler_titulo, ler_data, ler_prioridade
+from .utils import limpar_tela, ler_titulo, ler_data, ler_prioridade
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 DB_PATH = BASE_DIR / "data" / "tarefas_db.json"
@@ -73,6 +73,7 @@ def visualizar_tarefas(tarefas: list) -> None:
     print("4 - Todas")
 
     opcao = input("\nEscolha o filtro: ").strip()
+    limpar_tela()
     mapa = {"1": "hoje", "2": "semana", "3": "mes", "4": "todas"}
     periodo = mapa.get(opcao)
 
