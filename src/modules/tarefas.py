@@ -1,5 +1,3 @@
-"""CRUD e persistência de tarefas em arquivo JSON local."""
-
 import json
 from datetime import datetime
 from pathlib import Path

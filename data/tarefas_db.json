@@ -39,7 +39,7 @@
     "descricao": "7d + Mês + Todas",
     "prioridade": "Média",
     "data_limite": "21/10/2026",
-    "status": "Pendente"
+    "status": "Concluída"
   },
   {
     "titulo": "+7 dias (borda)",
@@ -74,6 +74,20 @@
     "descricao": "",
     "prioridade": "Baixa",
     "data_limite": "12/12/2000",
+    "status": "Concluída"
+  },
+  {
+    "titulo": "Estudar",
+    "descricao": "",
+    "prioridade": "Alta",
+    "data_limite": "18/10/2026",
+    "status": "Concluída"
+  },
+  {
+    "titulo": "Descançar",
+    "descricao": "",
+    "prioridade": "Alta",
+    "data_limite": "17/10/2026",
     "status": "Concluída"
   }
 ]
