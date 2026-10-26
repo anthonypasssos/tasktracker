@@ -2,6 +2,14 @@
 
 Aplicativo de linha de comando para cadastrar, consultar e concluir tarefas. Os dados são salvos localmente em `data/tarefas_db.json`.
 
+## Guia de Execução com Docker
+
+Para rodar a aplicação no seu ambiente, certifique-se de ter o Docker e o Docker Compose instalados. Execute os comandos exatos abaixo:
+
+### 1. Construir a imagem (Build)
+```bash
+docker build -t tasktracker-app .
+
 ## Requisitos
 
 - Python 3.9 ou superior
